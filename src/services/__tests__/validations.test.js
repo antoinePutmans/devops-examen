@@ -1,4 +1,9 @@
-const { isEmpty, is8CharMin, containsSpecialsChar, containsNumbers } = require("../validations");
+const {
+    isEmpty,
+    is8CharMin,
+    containsSpecialsChar,
+    containsNumbers,
+} = require("../validations");
 
 describe("validations tests suites - isEmpty", () => {
     test("should return true as the label is undefined", () => {
@@ -58,6 +63,3 @@ describe("validations tests suites - atLeastOneNumber", () => {
         expect(result).toBe(true);
     });
 });
-
-
-
