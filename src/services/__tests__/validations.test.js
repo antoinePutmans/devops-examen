@@ -1,4 +1,4 @@
-const { isEmpty,is8CharMin } = require("../validations");
+const { isEmpty, is8CharMin } = require("../validations");
 
 describe("validations tests suites - isEmpty", () => {
     test("should return true as the label is undefined", () => {
@@ -15,14 +15,11 @@ describe("validations tests suites - isEmpty", () => {
         const result = isEmpty("Label");
         expect(result).toBe(false);
     });
-
-    
 });
 
 // TODO: Create tests suite for validation function
 
 describe("validations tests suites - is8CharMin", () => {
-    
     test("should return false as the gamertag length is < 8", () => {
         const result = is8CharMin("Label");
         expect(result).toBe(false);
@@ -37,6 +34,4 @@ describe("validations tests suites - is8CharMin", () => {
         const result = is8CharMin("dlstechteaching");
         expect(result).toBe(true);
     });
-
-    
 });
