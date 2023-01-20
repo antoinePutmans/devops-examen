@@ -1,4 +1,4 @@
-const { isEmpty, is8CharMin, containsSpecialsChar } = require("../validations");
+const { isEmpty, is8CharMin, containsSpecialsChar, containsNumbers } = require("../validations");
 
 describe("validations tests suites - isEmpty", () => {
     test("should return true as the label is undefined", () => {
@@ -46,3 +46,18 @@ describe("validations tests suites - containsSpecialChar", () => {
         expect(result).toBe(true);
     });
 });
+
+describe("validations tests suites - atLeastOneNumber", () => {
+    test("should return false as the gamertag has no number in it ", () => {
+        const result = containsNumbers("Label");
+        expect(result).toBe(false);
+    });
+
+    test("should return true as the gamertag has a special char", () => {
+        const result = containsNumbers("saucissesMerguez3");
+        expect(result).toBe(true);
+    });
+});
+
+
+
