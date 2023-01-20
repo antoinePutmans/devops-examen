@@ -14,6 +14,11 @@ const containsSpecialsChar = (label) => {
     }
 };
 
+const containsNumbers = (label) => {
+    return /[0-9]/.test(label);
+};
+
 exports.isEmpty = isEmpty;
 exports.is8CharMin = is8CharMin;
 exports.containsSpecialsChar = containsSpecialsChar;
+exports.containsNumbers = containsNumbers;
